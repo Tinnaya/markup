@@ -1,0 +1,100 @@
+.takePart_back{
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	margin:0 auto;
+	&::before{
+		z-index:-1;
+		position:absolute;
+		left:0;
+		bottom: 0;
+		content: url('../images/back_comp_table.png');
+		opacity:0.3;
+	}
+	&::after{
+		position:absolute;
+		bottom: 0;
+		right: 0;
+		content: url('../images/comp_table.png');
+		opacity:0.94;
+	}
+
+}
+.takePart_content{
+	padding-right: 3.1rem;
+	padding-left: 6.2rem;
+	position: relative;
+	margin-bottom: 12rem;
+	z-index: 2;
+	&::after{
+		z-index:-1;
+		position:absolute;
+		right: 7rem;
+		bottom:0;
+		content: url('../images/lady_in_red.png');
+	}
+}
+.form-takePart {
+	display: flex;
+	background: $takePart_form_font_color;
+	justify-content: center;
+	width: 42.5rem;
+	border-radius: 0.8rem;
+	padding: 3.5rem 4.7rem 0 4.4rem;
+	margin-bottom: 21.5rem;
+	.text_form_takePart{
+		@include fontInfo( 4.8rem, 700, $takePart_text_color);
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 2.5rem;
+		p:nth-child(2){
+			font-size: 3rem;
+			font-weight: 500;
+			text-transform: lowercase;
+		}
+		span{
+			text-decoration: underline;
+		}
+	}
+	form{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		input {
+			width: 33.4rem;
+			height: 4.7rem;
+			background-color: #ffffff;
+			box-sizing: border-box;
+			margin-bottom: 0.9rem;
+			&::placeholder {
+				@include fontInfo(2.4rem, 500, $placeholderTakePart_color);
+				padding: 1rem 1rem 1rem 1.2rem;
+				box-sizing: border-box;
+			}
+		}
+		.button_form_takePart{
+			margin: 2.5rem auto 3.9rem;
+			button{
+				@include buttonBook(24rem, 8.7rem, $takePart_form_button_color, 3.6rem, 700, $buttonTakePart_color, 0.75);
+			}
+		}
+	}
+}
+
+.takePart-slogan {
+	display: block;
+	width: 100.7rem;
+	background-color:$takePart_form_font_color ;
+	border-radius: 0.8rem;
+	margin: 0 auto;
+	padding: 4rem 0 3.5rem ;
+	z-index: 1;
+	@include fontInfo2 (700, $takePart_text_color);
+	font-size: 3.6rem;
+	text-transform: uppercase;
+	text-align: center;
+	span {
+		font-size: 4.8rem;
+		font-weight: 800;
+	}
+}

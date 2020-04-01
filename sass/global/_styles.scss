@@ -1,0 +1,54 @@
+/* wrapper */
+html {
+	font-size: 10px;
+}
+// @media (min-width: 1280px){
+// 	html {
+// 		font-size: 15px;
+// 	}
+// }
+// @media (min-width: 1024px) and (max-width: 1279px) {
+// 	html {
+// 		font-size: 5px;
+// 	}
+// }
+// @media (min-width: 896px) and (max-width: 1023px) {
+// 	html {
+// 		font-size: 2px;
+// 	}
+// }
+*{
+	box-sizing: border-box;
+}
+#wrapper {
+	display:block;
+	position:relative;
+	width:100%;
+	height:100%;
+	background-color: $mainColor;
+	width: 128rem;
+	margin: 0 auto;
+}
+
+// div{
+// 	display: inline-block;
+// }
+
+.layout {
+	// display: flex;
+	margin:0 auto;
+	position:relative;
+	width:113rem;
+	// background-color: rgb(175, 94, 94);
+}
+main {
+	display:block;
+	width:100%;
+	position: relative;
+}
+#content{
+	position: relative;
+	width: 100%;
+}
+
+

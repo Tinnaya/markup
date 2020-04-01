@@ -1,0 +1,130 @@
+.additionalBenefits{
+	margin-bottom: 22rem;
+}
+.additionalBenefits-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 12.6rem 0 12rem;
+	z-index: 2;
+	position: relative;
+
+	//рамка
+	&::before {
+		content: '';
+		width: 97.4rem;
+		height: 85.6rem;
+		border: 5px solid #ce893c;
+		position: absolute;
+		top: -10rem;
+		left: 7.3rem;
+		z-index: 0;
+	}
+	&::after{//картинка яркая
+		z-index:1;
+		position:absolute;
+		left:0;
+		bottom:-3rem;
+		content: url('../images/orange_armchair.png');
+	}
+	.benefits-slogan{
+		display:flex;
+		flex-direction: column;
+		width: 60%;
+		padding-top: 10rem;
+		position: relative;
+		@include fontInfo(4.8rem, 700, #6d2504);
+		&::before{//кавычки
+			content:' ‘‘ ';
+			@include fontInfo(7.1rem, 700, #6d2504);
+			position: absolute;
+			top:6rem;
+			left: -2rem;
+		}
+		&::after{
+			content:' ’’ ';
+			@include fontInfo(7.1rem, 700, #6d2504);
+			position: absolute;
+			top:15.5rem;
+			right: 1.5rem;
+		}
+	}
+
+
+
+	.benefits-info-container{
+		width: 50%;
+		display: flex;
+		justify-content: flex-end;
+		&::before{//картинка фон
+			z-index:1;
+			position:absolute;
+			opacity: 0.5;
+			left:0;
+			top: -9.5rem;
+			content: url('../images/background_office.png');
+		}
+	}
+
+	.benefits-info {
+		display: grid;
+		grid-template-columns: 6.5rem 1.5rem 16rem;
+		grid-template-rows: 5.5rem 14rem 5.5rem 14rem 5.5rem 14rem 5.5rem;
+		@include fontInfo(1.9rem, 400, #4f1a1d);
+		.benefits-img1 {
+			grid-column: 1/2;
+			grid-row:1/2;
+		}
+		.benefits-img2 {
+			grid-column: 1/2;
+			grid-row:3/4;
+		}
+		.benefits-img3 {
+			grid-column: 1/2;
+			grid-row:5/6;
+		}
+		.benefits-img4 {
+			grid-column: 1/2;
+			grid-row:7/8;
+		}
+
+		.benefits-text1 {
+			grid-column: 3/4;
+			grid-row:1/2;
+		}
+		.benefits-text2 {
+			grid-column: 3/4;
+			grid-row:3/4;
+		}
+		.benefits-text3 {
+			grid-column: 3/4;
+			grid-row:5/6;
+		}
+		.benefits-text4 {
+			grid-column: 3/4;
+			grid-row:7/8;
+		}
+	}
+}
+.line_vert_hor{
+	position: relative;
+	margin-top: auto;
+}
+.line_vert_hor::before{
+		content: '';
+		width: 1px ;
+		height: 13.3rem;
+		background-color:#555555;
+		position: absolute;
+		left: -1rem;
+		bottom: -2rem;
+}
+.line_vert_hor::after{
+	content: '';
+	width: 16.9rem;
+	height: 1px;
+	background-color:#555555;
+	position: absolute;
+	bottom: -1rem;
+	left: -2rem;
+}

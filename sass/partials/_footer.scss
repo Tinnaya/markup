@@ -1,0 +1,25 @@
+footer {
+	background-color: #612327;
+}
+.contact-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 3.4rem;
+	@include fontInfo (2rem, 600, $footerText_color )
+
+}
+.box{
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+h2 {
+	@include fontInfo (2.4rem, 800, $footerText_color);
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 5.2rem;
+}
+a {
+	color: $footerText_color;
+}

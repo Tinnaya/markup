@@ -1,0 +1,77 @@
+header {
+	width:100%;
+	display:block;
+	// position:relative;
+	background-color: $headColor;
+	height: 7.7rem;
+	a.toTop {
+		width: 12rem;
+		height: 12rem;
+		// border: 20px solid transparent; border-bottom: 20px solid green;
+		right: 15rem;
+		bottom: 10rem;
+		@include fontInfo(2.4rem, 600,$mainColor);
+		text-transform: uppercase;
+		padding: 5rem 4rem;
+		text-align: center;
+		position: fixed;
+		opacity: 0.3;
+		background: linear-gradient(to right bottom, transparent 50%, RGBA(172,200,212,0.8) 50%) left / 50% 100% no-repeat, linear-gradient(to left bottom, transparent 50%, RGBA(172,200,212,0.8) 50%) right / 50% 100% no-repeat;
+		z-index: 100000;
+		transition: opacity linear 0.3s;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+.info-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	.address{
+		@include fontInfo(1.9rem, 300, $bannerFont_color);
+		display: flex;
+		flex-direction: row;
+		a{
+			color:$bannerFont_color;
+		}
+	}
+	.tel-container, .address-container {
+		display: flex;
+		flex-direction: column;
+		margin-right: 1.7rem;
+	}
+	.social-container{
+		a{
+			margin-right: 4rem;
+		}
+	}
+}
+
+
+
+.burgerMenu {
+	width: 2rem ;
+	height: 1.5rem ;
+	// position: absolute;
+}
+.burgerMenu-container{
+	display: none;
+	@include fontInfo(2.4rem, 300,$burg_Color);
+	background: rgba(12, 1, 5, 0.78);
+	width: 25rem;
+	position: absolute;
+	padding: 4rem 0rem 5rem 0rem;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	li {
+		width: 100%;
+		height: 7rem;
+		padding: 2.3rem 5rem;
+		&:hover{
+			background:rgba(255, 255, 255, 0.1);;
+		}
+	}
+}

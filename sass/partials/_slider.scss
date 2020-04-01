@@ -1,0 +1,221 @@
+section.slider {
+	margin-bottom: 22rem;
+}
+
+.layout{
+	width: 114rem;
+	margin: 0 auto;
+}
+.firstRow {
+	perspective: 80rem;//////
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 0.5rem;
+	width: 100%;
+
+	& div:nth-child(even){
+		margin: 0 -17.5rem;
+	}
+
+	& div:first-child::after,
+	& div:last-child::after {
+		position: absolute;
+		content: '';
+		width: 36.2rem;
+		height: 40.4rem;
+		clip-path: polygon(100% 0, 50% 100%, 0 0);
+		background-color: rgba(217, 151, 78, 0.8);
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	& div:nth-child(2n)::after{
+		position: absolute;
+		content: '';
+		width: 36.2rem;
+		height: 40.4rem;
+		clip-path: polygon(0 100% , 50% 0, 100% 100%); 
+		top: 0;
+		left: 0;
+		background: linear-gradient(0deg, rgba(217,151,78,0.2) 1%, rgba(255,255,255,0.01) 6%, rgba(255,255,255,0.01) 72%, rgba(215,151,78,0.5) 99%);
+	}
+	& div:nth-child(3)::after{
+		position: absolute;
+		content: '';
+		width: 36.2rem;
+		height: 40.4rem;
+		clip-path: polygon(100% 0, 50% 100%, 0 0);
+		top: 0;
+		left: 0;
+		background: linear-gradient(0deg, rgba(217,151,78,0.2) 1%, rgba(255,255,255,0.01) 6%, rgba(255,255,255,0.01) 72%, rgba(215,151,78,0.5) 99%);
+	}
+}
+
+.secondRow {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+
+	& div:nth-child(even){
+		margin: 0 -17.5rem;
+	}
+	& .triangleUp::after {
+		position: absolute;
+		content: '';
+		width: 36.2rem;
+		height: 40.4rem;
+		clip-path: polygon(0 100% , 50% 0, 100% 100%); 
+		background: linear-gradient(0deg, rgba(91,24,28,0.8) 3%, rgba(255,255,255,0.1) 28%, rgba(255,255,255,0.1) 86%, rgba(91,24,28,0.8) 99%);
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	& .triangleDown::after {
+		position: absolute;
+		content: '';
+		width: 36.2rem;
+		height: 40.4rem;
+		clip-path: polygon(100% 0, 50% 100%, 0 0);
+		background-color: rgba(91, 24, 28, 0.8);
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+
+.triangleUp {
+	padding: 32.7rem 5rem 0 4rem;
+	width: 36.2rem;
+	height: 40.4rem;
+	clip-path: polygon(0 100% , 50% 0, 100% 100%); 
+	position: relative;
+
+
+}
+.triangleDown {
+	width: 36.2rem;
+	height: 40.4rem;
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+	position: relative;
+
+}
+.vertRotate{
+	animation-delay: 2s;
+	transform-style: preserve-3d;
+	animation: notransform 2s 1;
+	transform: none;
+}
+.horRotate{
+	animation: rotate 2s 1;
+	transform-style: flat;
+	transform: none;
+}
+@keyframes rotate {
+	50% {
+
+	  transform: rotateX(45deg);
+	  }
+  }
+  @keyframes notransform {
+	50% {
+		// transform: none;
+		transform: rotateY(90deg);
+	}
+  }
+
+.text-review {
+	padding: 2.9rem 5rem 0 4rem;
+	font-family: 'Raleway', sans-serif;
+	font-size: 23.9px;
+	line-height: 1.2;
+	font-weight: 500;
+	color: #fcfbf9;
+	text-align: center;
+}
+.author-review{
+	padding: 0 2rem ;
+	width: 27.7rem;
+	height: 6.2rem;
+	background-color: rgba(255, 255, 255, 0.65);
+	font-family: 'Raleway', sans-serif;
+	font-size: 2.9rem;
+	font-weight: 700;
+	color: #472806;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 2.6rem;
+		height: 2px;
+		background-color: #ffffff;
+		top:3rem;
+		left:-1.3rem ;
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		width: 2.6rem;
+		height: 2px;
+		background-color: #ffffff;
+		top:3rem;
+		right: -1.3rem ;
+	}
+	& span{
+		font-size: 2.4rem;
+		margin-left: 6.5rem;
+	}
+}
+
+.circle {
+	display: inline-block;
+	width: 0.9rem;
+	height: 0.9rem;
+	border: 1px solid #fffff1;
+	border-radius: 50%;
+	&.active{
+		background-color:#ffffff;
+	}
+}
+.commit-box {
+	width: 27.2rem;
+	height: 13.9rem;
+}
+
+
+div.slide1 {
+	
+	background: #f9f6d6 url('../images/armchair.png');
+	
+
+}
+
+div.slide2 {
+	background:#f9f6d6 url('../images/guy.png');
+}
+div.slide3 {
+	background:#f9f6d6 url('../images/work_table.png');
+}
+div.slide4 {
+	background:#f9f6d6 url('../images/two_boys.png');
+}
+div.slide5 {
+	background:#f9f6d6 url('../images/chairs.png');
+}
+div.slide6 {
+	background:#f9f6d6 url('../images/anna.png');
+}
+div.slide7 {
+	background:#f9f6d6 url('../images/blurry_picture.png');
+}
+div.slide8 {
+	background:#f9f6d6 url('../images/two_armchairs.png');
+}
+div.slide9 {
+	background:#f9f6d6 url('../images/elephant.png');
+}
+div.slide10 {
+	background:#f9f6d6 url('../images/jane.png');
+}
