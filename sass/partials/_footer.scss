@@ -1,25 +1,52 @@
 footer {
 	background-color: #612327;
+	padding-bottom: 3rem;
 }
 .contact-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	padding-top: 3.4rem;
-	@include fontInfo (2rem, 600, $footerText_color )
+	@include fontInfo (2rem, 600, $footerText_color );
+	
 
 }
 .box{
 	display: flex;
 	flex-direction: column;
 	width: 30%;
+	a{
+		color:$bannerFont_color;
+		&:hover{
+			color: $counter3_color;
+		}
+	}
 }
 h2 {
 	@include fontInfo (2.4rem, 800, $footerText_color);
 	text-transform: uppercase;
-	text-align: center;
 	margin-bottom: 5.2rem;
 }
 a {
 	color: $footerText_color;
 }
+
+.social{
+	justify-content: center;
+	align-items: center;
+}
+.social-container{
+	margin-bottom: 2rem;
+	a{
+		margin-right: 4rem;
+		opacity: 0.5;
+		transition: opcity 0.3s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+.cellNumb {
+	justify-content: center;
+	align-items: flex-end;
+} 

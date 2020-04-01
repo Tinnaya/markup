@@ -35,6 +35,9 @@ header {
 		flex-direction: row;
 		a{
 			color:$bannerFont_color;
+			&:hover{
+				color: $counter3_color;
+			}
 		}
 	}
 	.tel-container, .address-container {
@@ -45,6 +48,11 @@ header {
 	.social-container{
 		a{
 			margin-right: 4rem;
+			opacity: 0.5;
+			transition: opcity 0.3s;
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 }

@@ -99,6 +99,14 @@ input:focus::-webkit-input-placeholder {
 html {
   font-size: 10px; }
 
+@media (min-width: 1024px) and (max-width: 1279px) {
+  html {
+    font-size: 5px; } }
+
+@media (min-width: 896px) and (max-width: 1023px) {
+  html {
+    font-size: 2px; } }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -183,6 +191,8 @@ header {
     flex-direction: row; }
     .info-container .address a {
       color: #f6f1bf; }
+      .info-container .address a:hover {
+        color: RGBA(172, 200, 212, 0.85); }
   .info-container .tel-container, .info-container .address-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -193,7 +203,13 @@ header {
     flex-direction: column;
     margin-right: 1.7rem; }
   .info-container .social-container a {
-    margin-right: 4rem; }
+    margin-right: 4rem;
+    opacity: 0.5;
+    -webkit-transition: opcity 0.3s;
+    -o-transition: opcity 0.3s;
+    transition: opcity 0.3s; }
+    .info-container .social-container a:hover {
+      opacity: 1; }
 
 .burgerMenu {
   width: 2rem;
@@ -275,7 +291,7 @@ header {
     color: #f6f1bf;
     margin-bottom: 2.3rem;
     text-align: center; }
-  .mainBanner-info-container img {
+  .mainBanner-info-container .logoImg {
     width: 21.6rem;
     height: 6rem;
     margin-bottom: 3.9rem; }
@@ -363,6 +379,20 @@ header {
           cursor: pointer; }
           .mainBanner-info-container .form-banner form .button_form_banner button:hover {
             opacity: 1; }
+
+@media (min-width: 1280px) {
+  #wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6d6;
+    margin: 0 auto; }
+  .mainBanner {
+    position: relative;
+    background-image: url("../images/main_banner.png");
+    background-size: cover;
+    overflow: hidden; } }
 
 .ourAdvantages {
   position: relative;
@@ -1831,12 +1861,10 @@ div.slide10 {
 
 .location {
   position: relative;
+  background-image: url("../images/city.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
   margin-bottom: 10rem; }
-  .location::before {
-    position: absolute;
-    left: 0;
-    top: 12rem;
-    content: url("../images/city.png"); }
 
 .location-container {
   width: 98.5rem;
@@ -1991,7 +2019,8 @@ div.slide10 {
     background-color: #d78e3f; }
 
 footer {
-  background-color: #612327; }
+  background-color: #612327;
+  padding-bottom: 3rem; }
 
 .contact-container {
   display: -webkit-box;
@@ -2020,6 +2049,10 @@ footer {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 30%; }
+  .box a {
+    color: #f6f1bf; }
+    .box a:hover {
+      color: RGBA(172, 200, 212, 0.85); }
 
 h2 {
   font-family: "Raleway", sans-serif;
@@ -2028,8 +2061,34 @@ h2 {
   line-height: 1.2;
   color: #f1e9b9;
   text-transform: uppercase;
-  text-align: center;
   margin-bottom: 5.2rem; }
 
 a {
   color: #f1e9b9; }
+
+.social {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.social-container {
+  margin-bottom: 2rem; }
+  .social-container a {
+    margin-right: 4rem;
+    opacity: 0.5;
+    -webkit-transition: opcity 0.3s;
+    -o-transition: opcity 0.3s;
+    transition: opcity 0.3s; }
+    .social-container a:hover {
+      opacity: 1; }
+
+.cellNumb {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }

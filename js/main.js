@@ -50,9 +50,15 @@ const $firstRow = $('.firstRow');
 const $secondRow = $('.secondRow');
 const $triangleUp = $('.triangleUp');
 const $triangleDown = $('.triangleDown');
-
+const $socialContainerHref = $('.social-container a');
 
 $(document).ready(function(){
+
+	// $socialContainerHref.hover( function () {
+	// 	$(this).html('<img src="./images/instagramHead.png" alt="instagram"></img>')
+	// }, function () {
+	// 	$(this).html('<img src="./images/twitterhead.png" alt="twiter"></img>')
+	// })
 
 	$comment.on('click', function(event){
 		event.preventDefault();
@@ -127,10 +133,10 @@ count1.__proto__= Count;
 count2.__proto__= Count;
 count3.__proto__= Count;
 count4.__proto__= Count;
-// count1.counter();
-// count2.counter();
-// count3.counter();
-// count4.counter();
+count1.counter();
+count2.counter();
+count3.counter();
+count4.counter();
 
 $(document).ready(function() {
 	$('.open-modal-btn').click(function(event) {
