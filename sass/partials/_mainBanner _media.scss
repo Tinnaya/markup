@@ -1,0 +1,37 @@
+@media screen and (min-width: 1280px) {
+	.mainBanner{
+		position: relative;
+		background-image: url('../images/main_banner.png');
+		background-size: cover;
+		overflow: hidden;
+	}
+}
+@media screen and (max-width: 1023px) {
+	.mainBanner{
+		justify-content: center;
+		.mainBanner-container{
+			justify-content: center;
+			&::before{
+				display: none;
+				content:'';
+				width: 53.6rem;
+				height: 1px;
+				background-color:$rhombusColor;
+				position: absolute;
+				bottom: 3.4rem;
+				right: 29.7rem;
+			}
+			&::after {
+				display: none;
+				content:'';
+				width: 2.6rem;
+				height: 2.6rem;
+				background-color:$rhombusColor ;
+				transform: rotate(45deg);
+				position: absolute;
+				bottom: 2rem;
+				right: 54.6rem;
+			}
+		}
+	}
+}

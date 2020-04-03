@@ -1,0 +1,16 @@
+
+@media screen and (max-width:620px){
+
+	.statistics_container{
+		width: 100%;
+		.counters{
+			flex-direction: column;
+			width: 100%;
+			background-image: none;
+			margin: 0 auto;
+		}
+	}
+	.same_prop{
+		width: 100%;
+	}
+}

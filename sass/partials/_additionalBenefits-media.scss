@@ -1,0 +1,30 @@
+@media screen and (max-width: 1024px) {
+	.additionalBenefits-container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 0;
+		width: 100%;
+	
+		//рамка
+		&::before {
+			content: '';
+			width: 80%;
+			height:110%;
+			top:0;
+			left: 10%;
+		}
+		&::after{//картинка яркая
+			display: none;
+		}
+		.benefits-slogan{
+			margin-bottom: 3rem;
+		}
+	}
+	.benefits-info-container{
+		&::before{//картинка фон
+			display: none;
+		}
+	}
+}

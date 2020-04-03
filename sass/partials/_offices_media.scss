@@ -1,0 +1,21 @@
+@media screen and (max-width:620px){
+	.info_office_container{
+		display: flex;
+		justify-content: center;
+		font-size: 1.6rem;
+		
+		margin-left: none;
+	
+	}
+	.info_office20_container{
+		display: flex;
+		justify-content: center;
+		font-size: 1.6rem;
+		margin-right: none;
+	
+	}
+	.office_info{
+		font-size: 1.6rem;
+		// width: 100%;
+	}
+}

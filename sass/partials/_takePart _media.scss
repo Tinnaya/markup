@@ -1,0 +1,22 @@
+@media screen and (max-width: 895px) {
+	.takePart_back{
+		
+		&::after{
+			display: none;
+		}
+	
+	}
+	.takePart_content{
+		display: flex;
+		justify-content: center;
+		&::after{
+			display: none;
+			
+		}
+	}
+	
+	.takePart-slogan {
+		display: none;
+
+	}
+}
