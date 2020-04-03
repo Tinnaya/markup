@@ -1,7 +1,7 @@
 .office50{
 	background-image: url('../images/office50.png');
 	background-size:cover;
-	max-height: 45rem;
+	min-height: 45rem;
 	.office50_gradient {
 		width: 100%;
 		height: 100%;
@@ -78,7 +78,7 @@
 .office20{
 	background-image: url('../images/office20.png');
 	background-size:cover;
-	max-height: 45rem;
+	min-height: 45rem;
 	.office20_gradient {
 		width: 100%;
 		height: 100%;

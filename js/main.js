@@ -128,31 +128,38 @@ count2.counter();
 count3.counter();
 count4.counter();
 
+
+//модальное окно
 $(document).ready(function() {
 	$('.open-modal-btn').click(function(event) {
 		event.preventDefault();
 		$('.modal').fadeIn();
+		$('body').addClass('bodyScroll-stop');
 
 	});
 	$('.popup-close').click(function() {
 		$(this).parents('.modal').fadeOut();
 		$(this).css("color", "red");
+		$('body').removeClass('bodyScroll-stop');
 	});
 
 	$(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();
 			$('.modal').fadeOut();
+			$('body').removeClass('bodyScroll-stop');
 		}
 	});
 	$('.modal').click(function(e) {
 		if ($(e.target).closest('.content').length == 0) {
 			$(this).fadeOut();
+			$('body').removeClass('bodyScroll-stop');
 		}
 
 	});
-});
 
+});
+//burger menu
 $(".burgerMenu").click(function () {
 	$(".burgerMenu-container").slideToggle("slow");
 
@@ -164,7 +171,7 @@ $(".burgerMenu-container a").click( function (event) {
 	$('html,body').animate({scrollTop: $($id).offset().top}, 1000);
 })
 
-
+//header fixed
 $(window).scroll(function() {
 
     if ($(this).scrollTop() > 1){  

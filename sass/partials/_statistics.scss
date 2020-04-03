@@ -3,7 +3,7 @@
 	margin-bottom: 4.8rem;
 }
 .statistics_container{
-	width: 114rem;
+	max-width: 114rem;
 	border-top: 2px solid #5a181c;
 	border-bottom: 2px solid #5a181c;
 	padding: 4rem 0;
@@ -12,7 +12,7 @@
 	.counters{
 		display: flex;
 		flex-direction: row;
-		width: 112.4rem;
+		max-width: 112.4rem;
 		background-image: url('../images/statistics_banner.png');
 		background-size: cover;
 		margin: 0 auto;

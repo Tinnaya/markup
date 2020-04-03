@@ -8,7 +8,7 @@
 	text-align: center;
 	overflow-x: auto;
 	overflow-y: scroll;
-	padding: 20px;
+	padding: 20rem;
 	z-index: 9999;
 	&::before {
 		content: '';
@@ -23,9 +23,7 @@
 	}
 }
 .content {
-	// display: none;
 	width: 87rem;
-	// min-width: 200px;
 	position: relative;
 	font-family: Raleway, sans-serif;
 	font-size: 4rem;
@@ -36,7 +34,6 @@
 	background-image: url('../images/ofis_fon_modal.png');
 	background-size: cover;
 	z-index: 10000;
-	// overflow: hidden;
 
 	.modal-content-header {
 		padding: 3.3rem 12rem 2.8rem ;
@@ -75,8 +72,11 @@
 		border-radius: 50%;
 		background: rgba(249, 246, 214, 0.3);
 		position: absolute;
-		top: 0rem;
-		right: 0rem;
+		top: 0.4rem;
+  		right: -0.4rem;
 		z-index: 0;
 	}
+}
+.bodyScroll-stop{
+	overflow: hidden;
 }

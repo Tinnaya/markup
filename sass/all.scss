@@ -6,16 +6,32 @@
 
 @import "partials/header.scss";//done
 @import "partials/header_media.scss";
+
 @import "partials/mainBanner.scss";//done
+@import "partials/mainBanner _media.scss";
+
 @import "partials/ourAdvantages.scss";//done
+@import "partials/ourAdvantages_media.scss";
+
 @import "partials/offices.scss";//done
+@import "partials/offices_media";
+
 @import "partials/discount.scss";//done
+@import "partials/discount_media";
+
 @import "partials/statistics.scss";//done
+@import "partials/statistics_media.scss";
+
 @import "partials/slider.scss";
+@import "partials/slider_media";
+
 @import "partials/slick.scss";
 @import "partials/slickChanges.scss";
 @import "partials/additionalBenefits.scss";//done
+@import "partials/additionalBenefits-media";
+
 @import "partials/takePart.scss";//done
+@import "partials/takePart _media";
 @import "partials/modal.scss";
 
 @import "partials/location.scss";

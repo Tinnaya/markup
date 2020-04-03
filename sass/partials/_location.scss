@@ -158,3 +158,9 @@
 		background-color:#d78e3f;
 	}
 }
+
+@media screen and (max-width: 895px) {
+	.location{
+		display: none;
+	}
+}
