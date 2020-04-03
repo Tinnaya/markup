@@ -2,16 +2,16 @@
 html {
 	font-size: 10px;
 }
-// @media (min-width: 1024px) and (max-width: 1279px) {
-// 	html {
-// 		font-size: 5px;
-// 	}
-// }
-// @media (min-width: 896px) and (max-width: 1023px) {
-// 	html {
-// 		font-size: 2px;
-// 	}
-// }
+@media (min-width: 1024px) and (max-width: 1279px) {
+	html {
+		font-size: 5px;
+	}
+}
+@media (min-width: 896px) and (max-width: 1023px) {
+	html {
+		font-size: 2px;
+	}
+}
 *{
 	box-sizing: border-box;
 }
