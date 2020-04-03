@@ -22,7 +22,6 @@
 		z-index: 9999;
 	}
 }
-  
 .content {
 	// display: none;
 	width: 87rem;
@@ -34,7 +33,7 @@
 	font-weight: 600;
 	color: #fcfcfc;
 	margin: 0 auto;
-	background-image: url(/images/ofis_fon_modal.png);
+	background-image: url('../images/ofis_fon_modal.png');
 	background-size: cover;
 	z-index: 10000;
 	// overflow: hidden;

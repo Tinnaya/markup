@@ -1,14 +1,15 @@
 header {
-	width:100%;
-	display:block;
-	// position:relative;
-	background-color: $headColor;
-	height: 7.7rem;
+	width: 100%;
+    display: block;
+    background-color: #0c0105;
+    position: relative;
+    padding: 2rem 10rem;
+    height: 7.7rem;
+    z-index: 100000;
 	a.toTop {
 		width: 12rem;
 		height: 12rem;
-		// border: 20px solid transparent; border-bottom: 20px solid green;
-		right: 15rem;
+		right: 1%;
 		bottom: 10rem;
 		@include fontInfo(2.4rem, 600,$mainColor);
 		text-transform: uppercase;
@@ -23,6 +24,9 @@ header {
 			opacity: 1;
 		}
 	}
+}
+.fixed{
+	position: fixed;
 }
 .info-container {
 	display: flex;
@@ -62,7 +66,6 @@ header {
 .burgerMenu {
 	width: 2rem ;
 	height: 1.5rem ;
-	// position: absolute;
 }
 .burgerMenu-container{
 	display: none;
@@ -82,4 +85,30 @@ header {
 			background:rgba(255, 255, 255, 0.1);;
 		}
 	}
+}
+// @media screen and (max-width:767px){
+// 	html{
+// 		font-size: 7px;	
+// 	}
+// 	.wrapper{
+// 		padding: 0 1rem;
+// 	}
+// }
+@media screen and (max-width:387px){
+	html{
+		font-size: 12px;
+	}
+	.wrapper{
+		padding: 5px;
+	}
+	
+	.info-container {
+		display: flex;
+		// flex-direction: column;
+		// justify-content: space-between;
+	}
+	.slider{
+		display: none;
+	}
+
 }

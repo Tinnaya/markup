@@ -99,31 +99,20 @@ input:focus::-webkit-input-placeholder {
 html {
   font-size: 10px; }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
-  html {
-    font-size: 5px; } }
-
-@media (min-width: 896px) and (max-width: 1023px) {
-  html {
-    font-size: 2px; } }
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 #wrapper {
-  display: block;
   position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #f9f6d6;
-  width: 128rem;
-  margin: 0 auto; }
+  overflow: hidden;
+  background-color: #f9f6d6; }
 
 .layout {
   margin: 0 auto;
+  width: 100%;
   position: relative;
-  width: 113rem; }
+  max-width: 113rem; }
 
 main {
   display: block;
@@ -138,11 +127,14 @@ header {
   width: 100%;
   display: block;
   background-color: #0c0105;
-  height: 7.7rem; }
+  position: relative;
+  padding: 2rem 10rem;
+  height: 7.7rem;
+  z-index: 100000; }
   header a.toTop {
     width: 12rem;
     height: 12rem;
-    right: 15rem;
+    right: 1%;
     bottom: 10rem;
     font-family: "Raleway", sans-serif;
     font-size: 2.4rem;
@@ -164,6 +156,9 @@ header {
     transition: opacity linear 0.3s; }
     header a.toTop:hover {
       opacity: 1; }
+
+.fixed {
+  position: fixed; }
 
 .info-container {
   display: -webkit-box;
@@ -236,6 +231,18 @@ header {
     .burgerMenu-container li:hover {
       background: rgba(255, 255, 255, 0.1); }
 
+@media screen and (max-width: 387px) {
+  html {
+    font-size: 12px; }
+  .wrapper {
+    padding: 5px; }
+  .info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .slider {
+    display: none; } }
+
 .mainBanner {
   position: relative;
   background-image: url("../images/main_banner.png");
@@ -247,7 +254,12 @@ header {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    padding-top: 2.7rem; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-top: 2.7rem;
+    max-width: 113rem; }
     .mainBanner .mainBanner-container::before {
       content: '';
       width: 53.6rem;
@@ -269,18 +281,16 @@ header {
       right: 54.6rem; }
 
 .mainBanner-info-container {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   width: 23rem;
   margin-bottom: 16.6rem;
-  position: relative;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  position: relative; }
   .mainBanner-info-container p {
     display: inline-block; }
   .mainBanner-info-container .coworking {
@@ -381,13 +391,6 @@ header {
             opacity: 1; }
 
 @media (min-width: 1280px) {
-  #wrapper {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #f9f6d6;
-    margin: 0 auto; }
   .mainBanner {
     position: relative;
     background-image: url("../images/main_banner.png");
@@ -1119,10 +1122,6 @@ header {
 section.slider {
   margin-bottom: 22rem; }
 
-.layout {
-  width: 114rem;
-  margin: 0 auto; }
-
 .firstRow {
   -webkit-perspective: 80rem;
   perspective: 80rem;
@@ -1819,7 +1818,7 @@ div.slide10 {
   font-weight: 600;
   color: #fcfcfc;
   margin: 0 auto;
-  background-image: url(/images/ofis_fon_modal.png);
+  background-image: url("../images/ofis_fon_modal.png");
   background-size: cover;
   z-index: 10000; }
   .content .modal-content-header {
