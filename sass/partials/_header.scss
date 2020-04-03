@@ -4,7 +4,7 @@ header {
     background-color: #0c0105;
     position: relative;
     padding: 2rem 10rem;
-    height: 7.7rem;
+    min-height: 7.7rem;
     z-index: 100000;
 	a.toTop {
 		width: 12rem;
@@ -33,6 +33,11 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
+	.addressAndSocial{
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+	}
 	.address{
 		@include fontInfo(1.9rem, 300, $bannerFont_color);
 		display: flex;
@@ -47,11 +52,11 @@ header {
 	.tel-container, .address-container {
 		display: flex;
 		flex-direction: column;
-		margin-right: 1.7rem;
 	}
 	.social-container{
+		display: flex;
+		justify-content:space-between;
 		a{
-			margin-right: 4rem;
 			opacity: 0.5;
 			transition: opcity 0.3s;
 			&:hover {
@@ -85,30 +90,4 @@ header {
 			background:rgba(255, 255, 255, 0.1);;
 		}
 	}
-}
-// @media screen and (max-width:767px){
-// 	html{
-// 		font-size: 7px;	
-// 	}
-// 	.wrapper{
-// 		padding: 0 1rem;
-// 	}
-// }
-@media screen and (max-width:387px){
-	html{
-		font-size: 12px;
-	}
-	.wrapper{
-		padding: 5px;
-	}
-	
-	.info-container {
-		display: flex;
-		// flex-direction: column;
-		// justify-content: space-between;
-	}
-	.slider{
-		display: none;
-	}
-
 }
